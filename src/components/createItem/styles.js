@@ -1,6 +1,22 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+
+  flex-direction: column;
+`;
+
+export const InputWarpper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin: 5px;
+  }
+  input {
+    margin: 5px;
+  }
+`;
 
 export const Button = styled.button`
   border: none;
@@ -12,4 +28,5 @@ export const Button = styled.button`
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  margin: 15px;
 `;
