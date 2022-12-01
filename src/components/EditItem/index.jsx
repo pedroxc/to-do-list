@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Container, Button, ButtonWarpper } from "./styles";
 
 export default function EditItem({ todo, setNome, openModal, deleteTodo }) {
   const [name, setName] = useState();
   return (
-    <div>
-      Nome da tarefa: {todo.text}
+    <Container>
+      <label>Nome da tarefa:</label> {todo.text}
       <div>
-        Novo nome da tarfa:{" "}
+        <label>Novo nome da tarfa</label>
         <input
           value={name}
           onChange={(e) => {
@@ -14,15 +15,23 @@ export default function EditItem({ todo, setNome, openModal, deleteTodo }) {
           }}
         />
       </div>
-      <button
-        onClick={() => {
-          openModal(false);
-          setNome(name);
-        }}
-      >
-        Salvar
-      </button>
-      <button onClick={() => deleteTodo(todo)}>Deleletar</button>
-    </div>
+      <ButtonWarpper>
+        <Button
+          onClick={() => {
+            openModal(false);
+            setNome(name);
+          }}
+          className="save"
+        >
+          Salvar
+        </Button>
+        <Button onClick={() => deleteTodo(todo)} className="delete">
+          Deleletar
+        </Button>
+      </ButtonWarpper>
+      <ButtonWarpper>
+        <Button onClick={() => openModal(false)}>Sair</Button>
+      </ButtonWarpper>
+    </Container>
   );
 }

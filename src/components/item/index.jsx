@@ -51,7 +51,7 @@ export default function Item({ todo, deleteTodo }) {
         isOpen={modal}
         style={{
           content: {
-            maxWidth: "30vw",
+            maxWidth: 300,
             maxHeight: "50vh",
             margin: "auto",
           },

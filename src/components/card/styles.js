@@ -10,6 +10,10 @@ export const Container = styled.div`
   height: fit-content;
   margin: 25px;
   border-radius: 12px;
+  @media (max-width: 1000px) {
+    width: calc(100vw - 100px);
+    height: fit-content;
+  }
 `;
 export const Text = styled.div`
   font-size: 1.5rem;

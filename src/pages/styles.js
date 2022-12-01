@@ -5,4 +5,8 @@ export const Container = styled.p`
   background-color: wheat;
   height: 100vh;
   flex-wrap: wrap;
+  @media (max-width: 1000px) {
+    width: 100vw;
+    height: fit-content;
+  }
 `;
